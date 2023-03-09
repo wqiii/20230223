@@ -1,0 +1,67 @@
+
+<style>
+ #result1 {
+ 	background-color: lightskyblue;
+ 	width: 100px;
+ 	height: 100px;
+ 	font-weight: bold;
+ 	font-size: 20px;   
+ }
+ #result2 {
+ 	background-color: steelblue;
+ 	width: 100px;
+ 	height: 100px;
+ 	font-weight: bold; 
+ 	font-size: 20px; 
+ }
+
+ button {
+ 	width: 100px;
+ 	height: 100px;
+ 	font-size: 25px;
+ }
+
+#cancel {
+	background-color: powderblue;
+}
+</style>
+
+<div id='result1'>
+</div>
+
+<div id='result2'>
+</div>
+
+<div>
+	<label for="x">劉榮樺</label>
+	<input type="number" name="x" id="x">
+	<br>
+	<label for="y">唐世哲</label>
+	<input type="number" name="y" id="y">
+	<br>
+	<button id="btn" onclick="show()">顯示最終投票結果</button>
+	<button id="cancel" onclick="show()">回復原狀狀態</button>
+</div>
+
+<script> 
+let message ="Bonjour";
+
+let x = "劉榮樺<img src='https://uploads.ioh.tw/uploads/speaker/avatar/402/5a8df20349.jpg' width='50' height='50'>";
+let y = "唐世哲<img src='https://www.mediawatch.org.tw/sites/default/files/styles/news-thumbnail/public/s200_shih-che.tang_.jpg?itok=YEnUMwrl' width='50' height='50'>";
+
+document.querySelector("#result1").innerHTML = x;
+document.querySelector("#result2").innerHTML = y;
+
+function show() {
+	let result_x = document.querySelector("#x").value;
+	let result_y = document.querySelector("#y").value;
+	document.querySelector("#result1").style.width = result_x + "px";
+	document.querySelector("#result2").style.width = result_y + "px";
+}
+
+function cancel() {}
+		document.querySelector("#result1").style.width = "100px";
+	document.querySelector("#result2").style.width = "100px";
+
+
+</script>
