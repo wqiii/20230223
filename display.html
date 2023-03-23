@@ -7,8 +7,8 @@
 
 	<button onclick="hide();">隱藏文字</button>
 	<button onclick="show();">顯示文字</button>
-	<button onclick="hideNewJeans();">隱藏NewJeans</button>
-	<button onclick="showNewJeans();">顯示NewJeans</button>
+	<button onclick="hideredvelvet();">隱藏redvelvet</button>
+	<button onclick="showredvelvet();">顯示redvelvet</button>
 
 	<div class="news_title">
 		第六週上課
@@ -16,9 +16,12 @@
 		要準備期中報告了
 	</div>
 	
-	<div class="NewJeans">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/NewJeans_theMEGASTUDY.jpg">
+	<div class="redvelvet">
+		<img src="https://www.kpopdays.com/wp-content/uploads/2022/03/RD.jpg">
 	</div>
+
+	<button class="redvelvet">
+
 
 <script type="text/javascript">
 	function hide() {
@@ -27,11 +30,11 @@
 	function show() {
 		document.querySelector(".news_title").style.display="block";
 	}
-	function hideNewJeans() {
-			document.querySelector(".newjeans").style.display="none";
+	function hideredvelvet() {
+			document.querySelector(".redvelvet").style.display="none";
 	}
-	function showNewJeans() {
-			document.querySelector(".newjeans").style.display="block";
+	function showredvelvet() {
+			document.querySelector(".redvelvet").style.display="block";
 	}
 
 </script>
