@@ -1,40 +1,170 @@
 <html>
 <head>
-	<title>顯示與隱藏</title>
+	<title>隱藏與顯示</title>
+
+
+<style>
+		.redvelvet img{
+			width: 500px;
+			height: auto;
+		}
+
+		.gidle img {
+			width: 500px;
+			height: auto;
+		}
+
+		.newjeans img {
+			width: 500px;
+			height: auto;
+		}
+
+		.result{
+		width: 100px;
+	 	height: 100px;
+	 	color: black;
+	 	font-weight: bold;
+	 	font-size: 20px;
+		}
+
+		.backgroundImage video{
+			width: 100vw;
+			height: auto;
+			position:fixed;
+			top:0px;
+			left:-200px;
+
+		}
+		button {
+ 		color:steelblue;
+ 		font-weight: bold;
+ 	}
+
+	</style>
+
 </head>
 
 <body>
 
-	<button onclick="hide();">隱藏文字</button>
-	<button onclick="show();">顯示文字</button>
 	<button onclick="hideredvelvet();">隱藏redvelvet</button>
 	<button onclick="showredvelvet();">顯示redvelvet</button>
+	<button onclick="hidegidle();">隱藏gidle</button>
+	<button onclick="showgidle();">顯示gidle</button>
+	<button onclick="hidenewjeans();">隱藏newjeans</button>
+	<button onclick="shownewjeans();">顯示newjeans</button>
 
-	<div class="news_title">
-		第六週上課
-		<br />
-		要準備期中報告了
-	</div>
-	
 	<div class="redvelvet">
-		<img src="https://www.kpopdays.com/wp-content/uploads/2022/03/RD.jpg">
+	<p>RedVelvet是由韓國SM娛樂旗下2014年所推出的女子組合，也是繼2009年的f(x)後，時隔五年再度推出女子組合。Red Velvet亦為SM娛樂所推出「SM ROOKIES」計劃的女子團體，由Irene、Seulgi、Wendy、Joy及Yeri共五位成員組成，並由Irene擔任隊長。
+	<img src="https://www.kpopdays.com/wp-content/uploads/2022/03/RD.jpg">	
+
+		<div class="redvelvetone">	
+		<img src="https://www.niusnews.com/upload/posts/posts_image3_86279_1577266252.jpg">
+		<button onclick="hideredvelvetone();">隱藏代表作品</button>
+		<button onclick="showredvelvetone();">顯示代表作品</button>
+		</div>
+	</p>
 	</div>
 
-	<button class="redvelvet">
+	<div class="gidle">
+	<p>(G)I-DLE是韓國Cube娛樂旗下的女子音樂組合，於2018年5月2日出道，現任成員為薇娟、Minnie、小娟、雨琦及舒華，並由小娟擔任隊長。團名由代表女孩的「여자、G、女」，韓文的「들、DLE、們」組成，意味著擁有獨特個性的「六」人所組成的團體。	
+	<img src="https://1.vikiplatform.com/pr/22068pr/566d868002.jpg?x=b&s=590x330&q=h&e=t&f=t&cb=1">
+		
+		<div class="gidleone">	
+		<img src="https://www.billboard.com/wp-content/uploads/2022/10/GIDLE-I-love-Publicity-Photo-2022-billboard-1548.jpg">
+		<button onclick="hidegidleone();">隱藏代表作品</button>
+		<button onclick="showgidleone();">顯示代表作品</button>
+		</div>
+
+	</p>
+	</div>
+
+	<div class="newjeans">
+	<p>NewJeans是由韓國娛樂公司HYBE的子公司ADOR於2022年7月22日推出的女子音樂組合，由三位韓國籍成員Minji、Haerin、Hyein，一位越南裔澳籍成員Hanni，以及一位韓澳雙籍成員Danielle所組成。2022年8月1日發行首張迷你專輯《New Jeans》正式出道。
+	<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/NewJeans_theMEGASTUDY.jpg">
+	</p>
+	</div>
 
 
 <script type="text/javascript">
-	function hide() {
-		document.querySelector(".news_title").style.display="none";
-	}	
-	function show() {
-		document.querySelector(".news_title").style.display="block";
-	}
+	
 	function hideredvelvet() {
-			document.querySelector(".redvelvet").style.display="none";
+
+		let elements = document.querySelectorAll(".redvelvet");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
 	}
 	function showredvelvet() {
-			document.querySelector(".redvelvet").style.display="block";
+
+		let elements = document.querySelectorAll(".redvelvet");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="https://www.kpopdays.com/wp-content/uploads/2022/03/RD.jpg)";
+	}
+
+	function hideredvelvetone() {
+
+		let elements = document.querySelectorAll(".redvelvetone");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
+	}
+	function showredvelvetone() {
+
+		let elements = document.querySelectorAll(".redvelvetone");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="https://www.niusnews.com/upload/posts/posts_image3_86279_1577266252.jpg)";
+	}
+	
+	function hidegidle() {
+
+		let elements = document.querySelectorAll(".gidle");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
+	}
+	function showgidle() {
+
+		let elements = document.querySelectorAll(".gidle");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="https://1.vikiplatform.com/pr/22068pr/566d868002.jpg?x=b&s=590x330&q=h&e=t&f=t&cb=1)";
+	}
+
+	function hidegidleone() {
+
+		let elements = document.querySelectorAll(".gidleone");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
+	}
+	function showgidleone() {
+
+		let elements = document.querySelectorAll(".gidleone");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="https://www.billboard.com/wp-content/uploads/2022/10/GIDLE-I-love-Publicity-Photo-2022-billboard-1548.jpg)";
+	}
+
+	function hidenewjeans() {
+
+		let elements = document.querySelectorAll(".newjeans");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "none";
+		}
+	}
+	function shownewjeans() {
+
+		let elements = document.querySelectorAll(".newjeans");
+		for(let i = 0; i < elements.length; i=i+1) {
+			elements[i].style.display = "inline-block";
+		}
+		document.querySelector("body").style.backgroundImage="https://upload.wikimedia.org/wikipedia/commons/c/cc/NewJeans_theMEGASTUDY.jpg)";
 	}
 
 </script>
